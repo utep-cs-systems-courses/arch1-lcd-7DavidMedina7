@@ -3,6 +3,7 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 #include "buzzer.h"
+#include "cool_song.h"
 
 #define LED BIT6	       
 
@@ -133,16 +134,16 @@ void update_shape()
     }
 
     if (switches & SW4) {
-      // play_cool_song();
+      play_cool_song();
 
-      switch (song_state) {
-      case 0: period = 1000; song_state = 1; break;
+      //switch (song_state) {
+      //case 0: period = 1000; song_state = 1; break;
 
-      case 1: period = 1500; song_state = 2; break;
+      //case 1: period = 1500; song_state = 2; break;
 
-      case 2: period = 2000; song_state = 0; break;
-      }
-      buzzer_set_period(period);
+      //case 2: period = 2000; song_state = 0; break;
+      //}
+      //buzzer_set_period(period);
     }
     step ++;
     
